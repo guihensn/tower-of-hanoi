@@ -1,0 +1,63 @@
+.configs{
+    font-size: var(--font-size-2);
+    text-align: center;
+
+    box-sizing: border-box;
+
+    height: 490px;
+    width: 320px;
+
+    max-height: 100%;
+
+    padding-top: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.configs__label{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.configs__input{
+    outline: none; 
+    
+    font-family: inherit;
+    font-size: inherit;
+    text-align: inherit;
+
+    width: 200px;
+    height: 60px;
+
+    padding: 0;
+
+    margin-bottom: 35px;
+
+    border: none;
+    background-color: var(--sixth-color);
+}
+
+.configs__button{
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+
+    width: 200px;
+    height: 60px;
+    
+    border: none;
+}
+
+  
+@media screen and (max-height: 500px) {
+    .configs{
+        height: 350px;
+    }
+    .configs__label{
+        margin-bottom: 10px;
+    }
+
+    .configs__input{
+        margin-bottom: 10px;
+    }
+}

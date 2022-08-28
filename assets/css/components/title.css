@@ -1,0 +1,17 @@
+.title{
+    --height:335px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: var(--height);
+    height:  var(--height);
+
+    font-size: var(--font-size-1);
+    text-align: center;
+    white-space: nowrap;
+
+    transform-origin: calc(var(--height)/2), calc(var(--height)/2);
+    transform: rotate(270deg)
+}

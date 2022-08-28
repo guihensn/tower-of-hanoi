@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/page-icon.svg">
+    <title>Tower of hanoi</title>
+
+    <link rel="stylesheet" href="assets/css/base/variables.css">
+    <link rel="stylesheet" href="assets/css/base/_reset.css">
+    <link rel="stylesheet" href="assets/css/base/base.css">
+    <link rel="stylesheet" href="assets/css/components/stack.css">
+    <link rel="stylesheet" href="assets/css/components/title.css">
+    <link rel="stylesheet" href="assets/css/components/configs.css">
+    <link rel="stylesheet" href="assets/css/components/tower.css">
+    <link rel="stylesheet" href="assets/css/components/explanation.css">
+
+    <script  src="scripts/tower-of-hanoi.js"></script>
+</head>
+
+<body>
+    <button id="menu-button" onclick="showHeader()"></button>
+    <button id="dark-screen" onclick="hideHeader()"></button>
+    <button id="explanation-button" onclick="showExplanation()"></button>
+
+    <header>
+        <ul class="stack">
+            <li class="stack__item stack__item--hide"></li>
+            <li class="stack__item stack__item--hide"></li>
+            <li class="stack__item stack__item--hide-2" ></li>
+            <li class="stack__item stack__item--hide-2"></li>
+            <span class="stack__item">
+                <span class="title">Tower of hanoi</span>
+            </span>
+            <li class="stack__item stack__item--hide-2"></li>
+            <li class="stack__item stack__item--hide-2"></li>
+            <li class="stack__item stack__item--hide"></li>
+            <li class="stack__item stack__item--hide"></li>
+        </ul>
+        
+        <ul class="stack">
+            <li class="stack__item stack__item--alternative stack__item--hide"></li>
+            <li class="stack__item stack__item--alternative stack__item--hide-2"></li>
+            <li class="stack__item stack__item--alternative">
+                <div class="configs">
+                    <label for="" class="configs__label">Blocks</label>
+                    <input id="input-blocks" class="configs__input" type="number" min='1' max='15' value="5">
+    
+                    <label for="" class="configs__label">Frame-rate</label>
+                    <input id="input-frame-rate" class="configs__input" type="number" min='1' value="2">
+                    <button class="configs__button" onclick="start(); hideHeader()">Start</button>
+                </div>
+            </li>
+            <li class="stack__item stack__item--alternative stack__item--hide-2"></li>
+            <li class="stack__item stack__item--alternative stack__item--hide"></li>
+        </ul>
+    </header>
+    
+    <main id="animation">
+        <div  class="tower">
+            <div class="tower__base"></div>
+            <div class="tower__column">
+                <div class="tower__pin"></div>
+                <div class="tower__block" style="width: 200px;"></div>
+                <div class="tower__block" style="width: 160px;"></div>
+                <div class="tower__block" style="width: 120px;"></div>
+                <div class="tower__block" style="width: 80px;"></div>
+                <div class="tower__block" style="width: 60px"></div>
+            </div>
+            <div class="tower__column">
+                <div class="tower__pin"></div>
+            </div>
+            <div class="tower__column">
+                <div class="tower__pin"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="explanation">
+        <div class="explanation__card">
+            <button class="explanation__close-button" onclick="hideExplanation()"></button>
+            <h2 class="explanation__title">
+                About
+            </h2>
+            <p>Tower of Hanoi is a game where there are three piles and you need to move all the blocks from one pile to another pile.</p>
+            <img class="explanation__image"src="assets/images/game.svg" alt="">
+            <br><p>But there is a rule, during the game you cannot place a bigger block on top of a smaller one.</p>
+            <img class="explanation__image"src="assets/images/invalid-move.svg" alt="">
+            <br><p>This software is an animation from the solution for an specified number of blocks.</p>
+
+            <p><br>**This software uses a recursive solution. To avoid excessive memory consumption, the value of the number of blocks is limited to fifteen.**</p>
+        </div>
+    </div>
+
+    <div id="landscape-note" class="explanation">
+        <div class="explanation__card">
+            <h2 class="explanation__title">
+                Please use your device in the landscape mode ;)
+            </h2>
+        </div>
+    </div>
+    
+    <script src="scripts/show-hide-explanation.js"></script>
+    <script src="scripts/show-hide-header.js"></script>
+</body>
+
+</html>
