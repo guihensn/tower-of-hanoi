@@ -86,8 +86,7 @@ header{
     }
   }
 
-@media screen and (max-width: 1200px),
-       screen and (max-height: 800px){
+@media screen and (max-width: 1315px),screen and (max-height: 800px){
     body{
         --font-size-1: 30px;
         --font-size-2: 24px;
@@ -97,17 +96,21 @@ header{
         display: block;
     }
     
+}
+
+@media screen and (min-width: 1315px){
+    #menu-button {
+        display: none !important;;
+    }
+}
+
+@media screen and (max-width: 1315px){
     header{
         display: none;
     }
 }
 
-@media screen and (min-width: 1200px),
-       screen and (min-height: 800px){
-    #menu-button {
-        display: none !important;;
-    }
-
+@media screen and (min-width: 1315px){
     header{
         display: flex !important;
     }
